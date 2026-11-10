@@ -1,2 +1,9 @@
 .env
 node_modules/
+
+# 本機虛擬環境與前端建置產物（2026-11-10）
+venv/
+.next/
+node_modules/
+.env.local
+next-env.d.ts
