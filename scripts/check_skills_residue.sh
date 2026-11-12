@@ -14,7 +14,7 @@
 # Exit：有殘留回 1；上游庫沒 clone 時明說跳過並回 0。
 set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-UPSTREAM="${ARK_SKILLS_UPSTREAM:-$HOME/kiro-cli/.kiro/skills}"
+UPSTREAM="${ARK_SKILLS_UPSTREAM:-$HOME/kiro-cli/github/shared/ark-agent-skills}"
 CHECKER="$UPSTREAM/scripts/check_consumers.py"
 
 if [[ ! -f "$CHECKER" ]]; then

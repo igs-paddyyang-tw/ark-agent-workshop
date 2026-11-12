@@ -431,8 +431,9 @@ def run(root: Path, skills_root: Path | None) -> tuple[list[Finding], ScanStats]
 
 
 def default_skills_root() -> Path | None:
-    """推測共用庫位置（本機慣例：~/kiro-cli/.kiro/skills）。"""
-    for cand in (Path.home() / "kiro-cli" / ".kiro" / "skills",):
+    """推測共用庫位置：上游 clone（2026-11-12 起 ~/kiro-cli/github/shared/ark-agent-skills），舊路徑留作備援。"""
+    for cand in (Path.home() / "kiro-cli" / "github" / "shared" / "ark-agent-skills",
+                 Path.home() / "kiro-cli" / ".kiro" / "skills"):
         if cand.is_dir():
             return cand
     return None
